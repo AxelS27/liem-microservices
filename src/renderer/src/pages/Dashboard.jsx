@@ -8,6 +8,18 @@ const services = [
     description: 'Set a custom Discord Rich Presence for any app'
   },
   {
+    to: '/downloader',
+    icon: '📥',
+    name: 'Youtube Downloader',
+    description: 'Download high-quality video or extract audio from YouTube'
+  },
+  {
+    to: '/converter',
+    icon: '🔄',
+    name: 'Media Converter',
+    description: 'Convert video and audio files to other formats using FFmpeg'
+  },
+  {
     to: '/settings',
     icon: '⚙️',
     name: 'Settings',

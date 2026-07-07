@@ -3,6 +3,8 @@ import { join } from 'path'
 import { readFileSync, writeFileSync, existsSync } from 'fs'
 import { autoUpdater } from 'electron-updater'
 import { registerRpcHandlers } from '../../services/rpc/ipc.js'
+import { registerDownloaderHandlers } from '../../services/downloader/ipc.js'
+import { registerConverterHandlers } from '../../services/converter/ipc.js'
 import { startWatcher } from './processWatcher.js'
 import { startFlWatcher } from './flStudioWatcher.js'
 
@@ -92,6 +94,8 @@ function createTray() {
 }
 
 registerRpcHandlers()
+registerDownloaderHandlers()
+registerConverterHandlers()
 
 ipcMain.handle('config:get', () => readConfig())
 ipcMain.handle('config:set', (_, data) => { writeConfig(data); return { success: true } })

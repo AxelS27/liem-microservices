@@ -38,6 +38,34 @@ export default function Sidebar() {
         </NavLink>
 
         <NavLink
+          to="/downloader"
+          className={({ isActive }) =>
+            `flex items-center gap-2 px-3 h-[34px] rounded-[5px] text-[13px] mb-1 transition-all ${
+              isActive
+                ? 'bg-white/[0.07] text-white font-medium'
+                : 'text-[#abb2bf] hover:text-white hover:bg-white/[0.05]'
+            }`
+          }
+        >
+          <span className="text-base leading-none">📥</span>
+          <span>Downloader</span>
+        </NavLink>
+
+        <NavLink
+          to="/converter"
+          className={({ isActive }) =>
+            `flex items-center gap-2 px-3 h-[34px] rounded-[5px] text-[13px] mb-1 transition-all ${
+              isActive
+                ? 'bg-white/[0.07] text-white font-medium'
+                : 'text-[#abb2bf] hover:text-white hover:bg-white/[0.05]'
+            }`
+          }
+        >
+          <span className="text-base leading-none">🔄</span>
+          <span>Converter</span>
+        </NavLink>
+
+        <NavLink
           to="/settings"
           className={({ isActive }) =>
             `flex items-center gap-2 px-3 h-[34px] rounded-[5px] text-[13px] mb-1 transition-all ${

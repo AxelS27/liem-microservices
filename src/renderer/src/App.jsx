@@ -4,6 +4,8 @@ import Sidebar from './components/Sidebar'
 import TitleBar from './components/TitleBar'
 import Dashboard from './pages/Dashboard'
 import FakeRPC from './pages/FakeRPC'
+import Downloader from './pages/Downloader'
+import Converter from './pages/Converter'
 import Settings from './pages/Settings'
 
 export default function App() {
@@ -25,6 +27,8 @@ export default function App() {
             <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="/fakerpc" element={<FakeRPC />} />
+              <Route path="/downloader" element={<Downloader />} />
+              <Route path="/converter" element={<Converter />} />
               <Route path="/settings" element={<Settings />} />
             </Routes>
           </main>

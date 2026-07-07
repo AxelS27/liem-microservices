@@ -1,6 +1,6 @@
 {
   "name": "liem-control-panel",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Liem Microservices",
   "main": "out/main/index.js",
   "scripts": {
@@ -57,7 +57,9 @@
   },
   "dependencies": {
     "discord-rpc": "^4.0.1",
-    "electron-updater": "^6.8.3"
+    "electron-updater": "^6.8.3",
+    "ffbinaries": "^1.1.6",
+    "yt-dlp-wrap": "^2.3.12"
   },
   "devDependencies": {
     "@electron-toolkit/utils": "^3.0.0",
