@@ -3,6 +3,7 @@ import DiscordPreview from '../components/DiscordPreview'
 import netflixLogo from '../assets/netflix.png'
 import youtubeLogo from '../assets/youtube.jpg'
 import dimsumLogo from '../assets/dimsum_studio.png'
+import wetvLogo from '../assets/wetv.png'
 import customLogo from '../assets/icon.png'
 
 const PRESETS = [
@@ -28,6 +29,32 @@ const PRESETS = [
         state: epState,
         largeImageKey: 'netflix',
         largeImageText: 'Netflix',
+        ...(showTimestamp && { startTimestamp: Date.now() })
+      }
+    }
+  },
+  {
+    id: 'wetv',
+    name: 'WeTV',
+    emoji: '📺',
+    logo: wetvLogo,
+    clientId: '1529000890722291762',
+    fields: [
+      { key: 'title', label: 'Title', placeholder: 'Love Between Fairy and Devil' },
+      { key: 'episode', label: 'Episode', placeholder: '12 (optional)' },
+      { key: 'season', label: 'Season', placeholder: '1 (optional)' }
+    ],
+    buildActivity(f, showTimestamp) {
+      const epState = (() => {
+        if (!f.episode) return undefined
+        const ep = `Eps ${f.episode}`
+        return f.season ? `${ep} · Season ${f.season}` : ep
+      })()
+      return {
+        details: (f.title || 'Watching WeTV').padEnd(2, ' '),
+        state: epState,
+        largeImageKey: 'wetv',
+        largeImageText: 'WeTV',
         ...(showTimestamp && { startTimestamp: Date.now() })
       }
     }
