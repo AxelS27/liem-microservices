@@ -51,7 +51,7 @@ const PRESETS = [
         return f.season ? `${ep} · Season ${f.season}` : ep
       })()
       return {
-        details: (f.title || 'Watching WeTV').padEnd(2, ' '),
+        details: (f.title || 'Idle').padEnd(2, ' '),
         state: epState,
         largeImageKey: 'wetv',
         largeImageText: 'WeTV',
